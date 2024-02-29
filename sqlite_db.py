@@ -32,15 +32,18 @@ cur.execute("INSERT INTO games VALUES (1, 'Mario Bros', 'PG', 'Nintendo Switch',
 
 # add data into customers table
 
-###
+cur.execute("INSERT INTO customers VALUES (1, 'adam', 'bingham', 'abing@example.com', 1233334444)")
 
 # add data into orders table
 
-###
+cur.execute("INSERT INTO orders VALUES (1, 1, '2024-02-29', 129.99)")
 
 # get the data from the games table
 
-cur.execute("SELECT * FROM games")
+results1 = cur.execute("SELECT * FROM games").fetchall()
+results2 = cur.execute("SELECT * FROM customers").fetchall()
+results3 = cur.execute("SELECT * FROM orders").fetchall()
 
-results = cur.fetchall()
-print(results)
+print(results1)
+print(results2)
+print(results3)
