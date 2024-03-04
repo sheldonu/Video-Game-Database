@@ -18,14 +18,15 @@
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
+* Visual Studio Code
+* Python 3.10.4 64 bit
+* Git / GitHub
+* sqlite3
 
 # Useful Websites
 
 - [sqlite3 — DB-API 2.0 interface for SQLite databases](https://docs.python.org/3/library/sqlite3.html)
-- [Web Site Name](http://url.link.goes.here)
+- [Python SQLite Tutorial](https://www.youtube.com/watch?v=pd-0G0MigUA)
 
 # Future Work
 
