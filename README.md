@@ -27,6 +27,7 @@
 
 - [sqlite3 — DB-API 2.0 interface for SQLite databases](https://docs.python.org/3/library/sqlite3.html)
 - [Python SQLite Tutorial](https://www.youtube.com/watch?v=pd-0G0MigUA)
+- [How to store data with Python and SQLite3](https://www.youtube.com/watch?app=desktop&v=RZI-v-Z1W4c)
 
 # Future Work
 

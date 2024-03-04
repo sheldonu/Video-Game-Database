@@ -28,15 +28,17 @@ cur.execute("""CREATE TABLE IF NOT EXISTS
 
 # add data into games table
 
-cur.execute("INSERT INTO games VALUES (1, 'Mario Bros', 'PG', 'Nintendo Switch', '2018-07-11', 59.99, 100)")
+cur.execute("""INSERT OR IGNORE INTO games VALUES (1, 'Mario Bros', 'E', 'Nintendo Switch', '2018-07-11', 59.99, 100),
+            (2, 'Legend of Zelda', 'E10', 'Nintendo Switch', '2019-06-12', 69.99, 50),
+            (3, 'Kirby Air Ride', 'E', 'Gamecube', '2012-01-06', 29.99, 10)""")
 
 # add data into customers table
 
-cur.execute("INSERT INTO customers VALUES (1, 'adam', 'bingham', 'abing@example.com', 1233334444)")
+cur.execute("INSERT OR IGNORE INTO customers VALUES (1, 'adam', 'bingham', 'abing@example.com', 1233334444)")
 
 # add data into orders table
 
-cur.execute("INSERT INTO orders VALUES (1, 1, '2024-02-29', 129.99)")
+cur.execute("INSERT OR IGNORE INTO orders VALUES (1, 1, '2024-02-29', 129.99)")
 
 # get the data from the games table
 
@@ -45,5 +47,7 @@ results2 = cur.execute("SELECT * FROM customers").fetchall()
 results3 = cur.execute("SELECT * FROM orders").fetchall()
 
 print(results1)
+print('\n')
 print(results2)
+print('\n')
 print(results3)
