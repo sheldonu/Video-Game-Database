@@ -47,25 +47,19 @@ cur.execute("""INSERT OR IGNORE INTO orders VALUES
 
 con.commit()
 
-# get the data from the games table
-
-results1 = cur.execute("SELECT * FROM games").fetchall()
-results2 = cur.execute("SELECT * FROM customers").fetchall()
-results3 = cur.execute("SELECT * FROM orders").fetchall()
-
 # print games table
 
-print("Data from Games table:")
-print(results1)
+for row in cur.execute("SELECT * FROM games"):
+    print(row)
 print('')
 
-# print customers table
+# # print customers table
 
-print("Data from Customers table:")
-print(results2)
+for row in cur.execute("SELECT * FROM customers"):
+    print(row)
 print('')
 
-# print orders table
+# # print orders table
 
-print("Data from Orders Table:")
-print(results3)
+for row in cur.execute("SELECT * FROM orders"):
+    print(row)
