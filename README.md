@@ -24,9 +24,7 @@
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-
-- [Web Site Name](http://url.link.goes.here)
+- [sqlite3 — DB-API 2.0 interface for SQLite databases](https://docs.python.org/3/library/sqlite3.html)
 - [Web Site Name](http://url.link.goes.here)
 
 # Future Work
