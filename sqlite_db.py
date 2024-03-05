@@ -116,3 +116,5 @@ print("Updated Games Table:")
 for row in cur.execute("SELECT * FROM games"):
     print(row)
 print('')
+
+# try to make a statement that updates the in_stock of a game when an order is placed. (use an if statement)
