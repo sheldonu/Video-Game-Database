@@ -26,5 +26,5 @@ The relational database I am using is called sqlite3. It is different than most 
 # Future Work
 
 - Add more tables to the database
-- Item 2
+- Add update and delete statements to other tables
 - Item 3
