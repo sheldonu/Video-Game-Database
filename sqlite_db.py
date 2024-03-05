@@ -85,7 +85,34 @@ print('')
 
 # find out the total cost for adams' orders
 
+print("Total cost of adams' order")
 for row in cur.execute("""SELECT ROUND(SUM(total_cost), 2)
                         FROM customers, orders
                         WHERE customers.customer_id = orders.customer_id and first_name = 'adam'"""):
     print(row)
+print('')
+
+# update the cost for each game
+
+cur.execute("""UPDATE games
+            SET price = 49.99, in_stock = 80
+            WHERE game_id = 1""")
+# con.commit()  --- use this to commit the update to the database. If not, it won't save.
+
+# print the updated version of the games table
+
+print("Updated Games Table:")
+for row in cur.execute("SELECT * FROM games"):
+    print(row)
+print('')
+
+# delete the last item in the games table
+cur.execute("""DELETE FROM games
+            WHERE game_id = 3""")
+
+# print the updated version of the games table
+
+print("Updated Games Table:")
+for row in cur.execute("SELECT * FROM games"):
+    print(row)
+print('')
