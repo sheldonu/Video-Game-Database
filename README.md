@@ -1,12 +1,6 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
-
-{Provide a description of the software that you wrote and how it integrates with a SQL Relational Database. Describe how to use your program.}
-
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of how created the Relational Database.}
+This is a simple SQL Database program that uses the sqlite3 module. I created this to give an example of how to use sqlite3 in python and create a database that is stored via text file. I created my own example of what a database might look like for a small video game store. In the program I am able to create tables, populate data, and manipulate through that data with SQL queries. 
 
 [Software Demo Video](http://youtube.link.goes.here)
 
@@ -35,6 +29,6 @@
 
 {Make a list of things that you need to fix, improve, and add in the future.}
 
-- Item 1
+- Add more tables to the database
 - Item 2
 - Item 3
