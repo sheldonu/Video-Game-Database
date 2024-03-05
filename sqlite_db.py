@@ -36,30 +36,56 @@ cur.execute("""INSERT OR IGNORE INTO games VALUES
 # add data into customers table
 
 cur.execute("""INSERT OR IGNORE INTO customers VALUES 
-            (1, 'adam', 'bingham', 'abing@example.com', 1233334444)""")
+            (1, 'adam', 'bingham', 'abing@example.com', 1233334444),
+            (2, 'paul', 'bingham', 'pbing@example.com', 1233334445),
+            (3, 'steve', 'moore', 'smoore@example.com', 1233334446)""")
 
 # add data into orders table
 
 cur.execute("""INSERT OR IGNORE INTO orders VALUES 
-            (1, 1, '2024-02-29', 129.99)""")
+            (1, 1, '2024-02-29', 129.99),
+            (2, 2, '2024-03-01', 229.99),
+            (3, 1, '2024-03-02', 49.99),
+            (4, 3, '2024-03-06', 89.99)""")
 
-# commit everything
+# commit CREATE and INSERT statements
 
 con.commit()
 
-# print games table
+# print complete games table
 
+print("Complete Games Table:")
 for row in cur.execute("SELECT * FROM games"):
     print(row)
 print('')
 
-# # print customers table
+# print complete customers table
 
+print("Complete Customers Table:")
 for row in cur.execute("SELECT * FROM customers"):
     print(row)
 print('')
 
-# # print orders table
+# print complete orders table
 
+print("Complete Orders Table:")
 for row in cur.execute("SELECT * FROM orders"):
+    print(row)
+print('')
+
+# join table for customers and orders
+
+print('Join Table:')
+for row in cur.execute("""SELECT first_name, order_id, total_cost
+                       FROM customers, orders
+                       WHERE customers.customer_id = orders.customer_id"""):
+    print(row)
+
+print('')
+
+# find out the total cost for adams' orders
+
+for row in cur.execute("""SELECT ROUND(SUM(total_cost), 2)
+                        FROM customers, orders
+                        WHERE customers.customer_id = orders.customer_id and first_name = 'adam'"""):
     print(row)
