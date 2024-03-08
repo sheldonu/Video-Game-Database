@@ -97,7 +97,6 @@ print('')
 cur.execute("""UPDATE games
             SET price = 49.99, in_stock = 80
             WHERE game_id = 1""")
-# con.commit()  --- use this to commit the update to the database. If not, it won't save.
 
 # print the updated version of the games table
 

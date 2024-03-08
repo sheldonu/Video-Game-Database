@@ -2,7 +2,7 @@
 
 This is a simple SQL Database program that uses the sqlite3 module. I created this to give an example of how to use sqlite3 in python and create a database that is stored via text file. I created my own example of what a database might look like for a small video game store. In the program I am able to create tables, populate data, and manipulate through that data with SQL queries. 
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Video Game Database Demonstration](http://youtube.link.goes.here)
 
 # Relational Database
 
