@@ -85,7 +85,7 @@ print('')
 
 # find out the total cost for adams' orders
 
-print("Total cost of adams' order")
+print("Total cost of adam's order")
 for row in cur.execute("""SELECT ROUND(SUM(total_cost), 2)
                         FROM customers, orders
                         WHERE customers.customer_id = orders.customer_id and first_name = 'adam'"""):
