@@ -27,4 +27,4 @@ The relational database I am using is called sqlite3. It is different than most 
 
 - Add more tables to the database
 - Add update and delete statements to other tables
-- Item 3
+- Update the software to add more user interaction
