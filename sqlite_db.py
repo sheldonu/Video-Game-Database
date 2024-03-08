@@ -117,4 +117,16 @@ for row in cur.execute("SELECT * FROM games"):
     print(row)
 print('')
 
-# try to make a statement that updates the in_stock of a game when an order is placed. (use an if statement)
+# input from the user to know whether to update the stock of a game
+
+if input('Would you like to buy these games? (y/n) ') == 'y':
+    cur.execute("""UPDATE games
+                SET in_stock = in_stock - 1
+                WHERE game_id = 1
+                OR game_id = 3""")
+    
+    print("Updated Games Table:")
+    for row in cur.execute("SELECT * FROM games"):
+        print(row)
+else:
+    exit
